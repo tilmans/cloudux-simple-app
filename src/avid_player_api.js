@@ -60,8 +60,8 @@ export default function createWrapper(assetEditor, mode) {
         return assetEditor.getCurrentFrameNumber(mode)
     }
 
-    function play() {
-        console.log("ASSET EDIT", assetEditor)
+    function setCurrentFrame(frame) {
+        return assetEditor.setCurrentFrameNumber(mode, frame)
     }
 
     function setMarks(markin, markout) {
@@ -79,7 +79,7 @@ export default function createWrapper(assetEditor, mode) {
     return {
         getPlayerContext,
         getCurrentFrame,
-        play,
+        setCurrentFrame,
         setMarks,
         getInPoint,
         getOutPoint,

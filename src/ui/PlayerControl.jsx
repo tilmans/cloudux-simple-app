@@ -55,11 +55,15 @@ export function PlayerControl({avid}) {
         }
     }
 
+    function setCurrentFrame(e) {
+        avid.getPlayer().setCurrentFrame(20)
+    }
+
     return (
         <div style={rowItem}>
-            <button onClick={play}>Play</button>
-            <button onClick={setInOut}>SetMarks</button>
+            <button onClick={setCurrentFrame}>Set Frame</button>
             <div>Current Frame: {frame}</div>
+            <button onClick={setInOut}>SetMarks</button>
             <button onClick={getInOut}>Get In/Out</button>
             <div>In: {inPoint}, Out: {outPoint}</div>
             <button onClick={toggleSequence}>Sequence</button>
