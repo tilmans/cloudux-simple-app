@@ -8,32 +8,22 @@
     "UI"
   ],
   "license": "MIT",
-  "author": "Tilman Schlenker<tilman@mailbox.org>",
+  "author": "Tilman Schlenker<git@tilmans.space>",
   "main": "build/index.js",
   "scripts": {
-    "build:avid": "webpack --config ./node_modules/cloudux-starter-kit/lib/connector/config/webpack.prod.config.js --display-error-details",
     "build": "webpack --config webpack.config.js --display-error-details",
-    "watch": "webpack --config webpack.config.js --display-error-details --watch",
-    "buildFeaturePack": "node ./scripts/buildFeaturePack.js",
-    "buildImage": "node ./scripts/buildImage.js",
-    "lint-fix": "eslint --ext .jsx --ext .js --fix ./src",
-    "publish": "node ./scripts/publish.js",
-    "start": "node --inspect scripts/start.js",
-    "test": "jest",
-    "elm-test": "elm-test",
-    "elm-test:watch": "elm-test --watch"
+    "watch": "webpack --config webpack.config.js --display-error-details --watch"
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "babel-loader": "^8.1.0",
     "base64-img": "1.0.4",
-    "copy-webpack-plugin": "^6.0.3",
-    "parcel-bundler": "^1.12.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "webpack": "^4.44.1"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "webpack": "^4.44.1",
+    "copy-webpack-plugin": "^6.0.3",
+    "babel-loader": "^8.1.0",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
     "@babel/polyfill": "^7.10.4",
