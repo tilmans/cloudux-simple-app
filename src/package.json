@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "appName": "app-sample"
+  },
+  "main": "index.js",
+  "avid": {
+    "format": "amd",
+    "alias": "",
+    "secret": "",
+    "autoload": false,
+    "features": {
+      "provides": {
+        "apps": [
+          {
+            "name": "marker-search",
+            "config": {
+              "id": "marker-search",
+              "title": {
+                "en": "Marker Search"
+              },
+              "dockable": false,
+              "inspector": false
+            },
+            "menuIcon": {
+              "group": 200,
+              "orderInGroup": 200,
+              "gradient": [
+                "#ba2f82", 
+                "#cf4c85"
+              ],
+              "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzZWFyY2gtbG9jYXRpb24iCiAgICAgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXNlYXJjaC1sb2NhdGlvbiBmYS13LTE2IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiCiAgICAgICAgICBkPSJNNTA1LjA0IDQ0Mi42NmwtOTkuNzEtOTkuNjljLTQuNS00LjUtMTAuNi03LTE3LTdoLTE2LjNjMjcuNi0zNS4zIDQ0LTc5LjY5IDQ0LTEyNy45OUM0MTYuMDMgOTMuMDkgMzIyLjkyIDAgMjA4LjAyIDBTMCA5My4wOSAwIDIwNy45OHM5My4xMSAyMDcuOTggMjA4LjAyIDIwNy45OGM0OC4zIDAgOTIuNzEtMTYuNCAxMjguMDEtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcxIDk5LjY5YzkuNCA5LjQgMjQuNiA5LjQgMzMuOSAwbDI4LjMtMjguM2M5LjQtOS40IDkuNC0yNC41OS4xLTMzLjk5em0tMjk3LjAyLTkwLjdjLTc5LjU0IDAtMTQ0LTY0LjM0LTE0NC0xNDMuOTggMC03OS41MyA2NC4zNS0xNDMuOTggMTQ0LTE0My45OCA3OS41NCAwIDE0NCA2NC4zNCAxNDQgMTQzLjk4IDAgNzkuNTMtNjQuMzUgMTQzLjk4LTE0NCAxNDMuOTh6bS4wMi0yMzkuOTZjLTQwLjc4IDAtNzMuODQgMzMuMDUtNzMuODQgNzMuODMgMCAzMi45NiA0OC4yNiA5My4wNSA2Ni43NSAxMTQuODZhOS4yNCA5LjI0IDAgMCAwIDE0LjE4IDBjMTguNDktMjEuODEgNjYuNzUtODEuODkgNjYuNzUtMTE0Ljg2IDAtNDAuNzgtMzMuMDYtNzMuODMtNzMuODQtNzMuODN6bTAgOTZjLTEzLjI2IDAtMjQtMTAuNzUtMjQtMjQgMC0xMy4yNiAxMC43NS0yNCAyNC0yNHMyNCAxMC43NCAyNCAyNGMwIDEzLjI1LTEwLjc1IDI0LTI0IDI0eiI+PC9wYXRoPgo8L3N2Zz4="
+            }
+          }
+        ]
+      }
+    }
+  }
+}

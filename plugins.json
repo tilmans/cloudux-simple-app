@@ -1,0 +1,1569 @@
+{
+  "plugins": [
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/UICore.js",
+        "multiEntryPoint": true,
+        "format": "amd",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "dependencies": [
+          "avid-react-16",
+          "avid-nux-global-libs",
+          "avid-user-settings",
+          "com.avid.central.jQuery",
+          "avid-nux-observable",
+          "avid-entitlements",
+          "avid-moment"
+        ],
+        "alias": "com.avid.central.UICore-655aef4c2222432ca0a0eccb5071a323"
+      },
+      "folderName": "com.avid.central.UICore",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-react-16.js",
+        "autoload": false,
+        "format": "amd",
+        "alias": "avid-react-16-5a14e49ea7ba479b90092fb9883ccc25"
+      },
+      "folderName": "avid-react-16",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-nux-global-libs",
+      "version": "0.0.13",
+      "description": "NUX legacy externals libs wrapped into plugin",
+      "main": "dist/index.js",
+      "keywords": [
+        "avid",
+        "nux"
+      ],
+      "author": "volodymyr.shugaiev@avid.com",
+      "license": "UNLICENSED",
+      "avid": {
+        "main": "index.js",
+        "alias": "avid-ui-ext-libs-a6c3a35ec11946f69e3f13cbedf150ff",
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-moment"
+        ]
+      },
+      "scripts": {
+        "build": "webpack",
+        "build:watch": "webpack --watch",
+        "version-up": "gitlab-ci-publish.sh"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git@git.devops-int.avid.com:dev/avid-nux-global-libs.git"
+      },
+      "publishConfig": {
+        "registry": "http://gl-nexus.global.avidww.com:8081/nexus/content/repositories/npm-kyiv/"
+      },
+      "devDependencies": {
+        "avid-mcux-ci-scripts": "0.0.15",
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-es2016": "^6.24.1",
+        "brotli-webpack-plugin": "1.0.0",
+        "compression-webpack-plugin": "^0.4.0",
+        "copy-webpack-plugin": "^4.0.1",
+        "css-loader": "^0.28.1",
+        "exports-loader": "^0.6.4",
+        "extract-text-webpack-plugin": "^2.1.0",
+        "file-loader": "^0.11.1",
+        "node-sass": "^4.5.2",
+        "resolve-url-loader": "^2.0.2",
+        "sass-loader": "^6.0.5",
+        "style-loader": "^0.17.0",
+        "svg-url-loader": "^2.0.2",
+        "tar.gz": "^1.0.5",
+        "webpack": "^2.5.1"
+      },
+      "dependencies": {
+        "uri-templates": "0.2.0"
+      },
+      "folderName": "avid-nux-global-libs",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/avid-user-settings.js",
+        "format": "amd",
+        "alias": "avid-user-settings-ace8bc36f3c74b89841e71c96b345adf",
+        "dependencies": [
+          "avid-moment"
+        ]
+      },
+      "folderName": "avid-user-settings",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "main": "jquery-3.1.1.min.js",
+      "private": true,
+      "avid": {
+        "autoload": false,
+        "alias": "avid-ui-shared-jquery-34025e69c0df497389ac7501266b7632",
+        "format": "global",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "com.avid.central.jQuery",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-nux-observable.js",
+        "autoload": false,
+        "format": "amd",
+        "alias": "avid-nux-observable-545c513fd5c242a096b2bb5b1a1a6ca8"
+      },
+      "folderName": "avid-nux-observable",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-entitlements.js",
+        "autoload": false,
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "format": "amd",
+        "alias": "avid-entitlements-63665cddb5f0443aab97f31391be237d"
+      },
+      "folderName": "avid-entitlements",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-moment",
+      "version": "0.0.5",
+      "description": "moment js plugin for cloud ux",
+      "main": "dist/index.js",
+      "avid": {
+        "main": "index.js",
+        "autoload": false,
+        "alias": "avid-moment-d7008ba7ffe84596bd80da53a8f5a33c",
+        "format": "amd"
+      },
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:watch": "webpack-cli --watch --mode=development",
+        "build": "webpack-cli --display-error-details",
+        "version-up": "gitlab-ci-publish.sh"
+      },
+      "publishConfig": {
+        "registry": "http://gl-nexus.global.avidww.com:8081/nexus/content/repositories/npm-kyiv/"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git@burl-gitlab.global.avidww.com:jp/avid-moment.git"
+      },
+      "license": "Proprietary",
+      "dependencies": {
+        "moment": "2.23.0",
+        "moment-timezone": "0.5.23"
+      },
+      "devDependencies": {
+        "@babel/core": "7.1.6",
+        "@babel/plugin-transform-runtime": "7.1.0",
+        "@babel/preset-env": "7.1.6",
+        "@babel/preset-react": "7.0.0",
+        "avid-mcux-ci-scripts": "0.0.16",
+        "babel-loader": "8.0.4",
+        "brotli-webpack-plugin": "1.0.0",
+        "compression-webpack-plugin": "2.0.0",
+        "copy-webpack-plugin": "4.6.0",
+        "uglifyjs-webpack-plugin": "1.3.0",
+        "webpack": "4.28.3",
+        "webpack-cli": "3.2.0"
+      },
+      "folderName": "avid-moment",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/avid-drag-data.js",
+        "format": "amd",
+        "alias": "avid-drag-data-c5d8a9e5d27545349644c1a71df0af04"
+      },
+      "folderName": "avid-drag-data",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": true,
+        "main": "js/feature-bootstrapper.js",
+        "format": "amd",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "alias": "FeatureBootstrapper-7a4a8931b0904de3a942039603081b00"
+      },
+      "folderName": "com.avid.central.FeatureBootstrapper",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-nux-styles",
+      "version": "0.0.1",
+      "description": "avid-nux-styles plugin to Avid MCUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": true,
+        "alias": "avid-ui-common-styles-6b01901e65294c50b9de4690abf6bfc4",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "avid-nux-styles",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-markers",
+      "version": "3.0.1",
+      "description": "avid-ui-markers plugin to Avid CloudUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16",
+          "avid-ui-redux-store",
+          "avid-ui-common-logging-components",
+          "avid-ui-timebased-metadata-storage",
+          "avid-broadcast-notification"
+        ],
+        "alias": "avid-ui-markers-19de64ad752649978693d3ecde178cc8",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "features": {
+          "provides": {
+            "appViews": [
+              {
+                "name": "av-ui-markers"
+              }
+            ],
+            "tabs": [
+              {
+                "name": "av-ui-markers"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "store": "1"
+            },
+            {
+              "reducers/timebased-metadata": "1"
+            },
+            {
+              "reducers/playerview": "1"
+            }
+          ]
+        }
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "avid-ui-markers",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-react-dom-16.js",
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-react-16"
+        ],
+        "alias": "avid-react-dom-16-c67e32987f764fc3b9e24f388c326c2f"
+      },
+      "folderName": "avid-react-dom-16",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-redux-store",
+      "version": "1.0.1",
+      "description": "",
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "features": {
+          "provides": {
+            "store": {
+              "name": "-"
+            }
+          }
+        },
+        "alias": "avid-ui-redux-store-f4c9beeec6734e73a32eeeaadfadb05b"
+      },
+      "main": "dist/bundle.js",
+      "scripts": {
+        "build": "webpack --entry ./src/index.js --output-filename bundle.js --mode production --output-library avid-ui-redux-store --output-library-target umd --devtool source-map",
+        "rpm": "npm run build && node src/build-rpm.js"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "@babel/core": "7.6.2",
+        "@babel/preset-env": "7.6.2",
+        "babel-loader": "8.0.6",
+        "rpm-builder": "1.1.0",
+        "webpack": "4.5.0",
+        "webpack-cli": "3.3.9"
+      },
+      "dependencies": {
+        "redux": "3.7.2",
+        "redux-thunk": "2.2.0"
+      },
+      "folderName": "avid-ui-redux-store",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-common-logging-components",
+      "version": "0.0.1",
+      "description": "CommonLoggingComponents-UI plugin to Avid MCUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16"
+        ],
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-common-logging-components",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-timebased-metadata-storage",
+      "version": "0.0.1",
+      "description": "avid-ui-timebased-metadata-storage plugin to Avid CloudUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "dependencies": [
+          "avid-ui-common-logging-components",
+          "avid-ui-redux-store"
+        ],
+        "alias": "avid-ui-timebased-metadata-storage-a32f3163f18844e1b90359d02cf1990f",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "features": {
+          "provides": {
+            "reducers/timebased-metadata": [
+              {
+                "name": "timeBasedMetadataReducer"
+              }
+            ],
+            "actions/timebased-metadata": [
+              {
+                "name": "timeBasedMetadataActions"
+              }
+            ]
+          },
+          "requires": [
+            {
+              "store": "1"
+            }
+          ]
+        }
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "avid-ui-timebased-metadata-storage",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/avid-broadcast-notification.js",
+        "format": "amd",
+        "alias": "avid-broadcast-notification-6ab7d0c7a16d4afcb8ef5ac7dc573610"
+      },
+      "folderName": "avid-broadcast-notification",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "com.avid.central.metadata.AssetMetadata-UI",
+      "version": "3.0.1",
+      "description": "com.avid.central.metadata.AssetMetadata-UI plugin to Avid MCUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        },
+        {
+          "name": "Nataliia Akimova",
+          "email": "nakimova@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": true,
+        "dependencies": [
+          "com.avid.central.Commons"
+        ],
+        "alias": "avid-ui-asset-metadata-2d7fec38740141ca8fba49284af65eb6",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "com.avid.central.metadata.AssetMetadata-UI",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "com.avid.central.Commons",
+      "version": "3.0.1",
+      "description": "com.avid.central.Commons plugin to Avid NUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        },
+        {
+          "name": "Nataliia Akimova",
+          "email": "nakimova@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": true,
+        "dependencies": [
+          "com.avid.central.ExtJSComponents",
+          "avid-nux-styles"
+        ],
+        "alias": "avid-ui-commons-1d3c7d1d11de4d7ea5a9eb3c40b7f61b",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "com.avid.central.Commons",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/ExtJSComponents.js",
+        "format": "global",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "alias": "ExtJSComponents-c1fb44ad768d4aaab987cb0bf68dc50a"
+      },
+      "folderName": "com.avid.central.ExtJSComponents",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "com.avid.central.interplay.InterplayUI",
+      "version": "0.0.1",
+      "description": "com.avid.central.interplay.InterplayUI plugin to Avid NUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": true,
+        "dependencies": [
+          "com.avid.central.ExtJSComponents",
+          "com.avid.central.Commons",
+          "avid-broadcast-notification"
+        ],
+        "alias": "avid-ui-production-3ad74e057e784f0aa3c832753c3a7988",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "com.avid.central.interplay.InterplayUI",
+      "basePath": "/plugins/pam/plugins"
+    },
+    {
+      "name": "com.avid.central.dms.DMS-UI",
+      "version": "0.0.1",
+      "description": "com.avid.central.dms.DMS-UI plugin to Avid NUX",
+      "main": "index.js",
+      "author": "Avid",
+      "license": "Proprietary",
+      "keywords": [
+        "avid"
+      ],
+      "maintainers": [
+        {
+          "name": "Roman Denysiuk",
+          "email": "roman.denysiuk@avid.com"
+        }
+      ],
+      "avid": {
+        "format": "amd",
+        "autoload": true,
+        "dependencies": [
+          "com.avid.central.ExtJSComponents",
+          "avid-nux-styles"
+        ],
+        "alias": "avid-ui-dms-858665deeead4c3499a9b1fca88ca930"
+      },
+      "publishConfig": {
+        "registry": "http://muc-nexus.global.avidww.com:8081/nexus/content/repositories/npm-muc/"
+      },
+      "folderName": "com.avid.central.dms.DMS-UI",
+      "basePath": "/plugins/pam/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "./index.js",
+        "format": "amd",
+        "dependencies": [
+          "avid-nux-styles",
+          "avid-broadcast-notification",
+          "com.avid.central.ExtJSComponents"
+        ],
+        "alias": "avid-ui-process-77e5aae93b5d43e18974967d8ebf8a85",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "features": {
+          "provides": {
+            "apps": [
+              {
+                "name": "process",
+                "config": {
+                  "id": "process",
+                  "title": {
+                    "en": "Process"
+                  },
+                  "dockable": true,
+                  "rightZone": false,
+                  "inspector": false,
+                  "inspectorConfig": {},
+                  "allowedContext": "none",
+                  "preload": false
+                },
+                "menuIcon": {
+                  "group": 100,
+                  "orderInGroup": 350,
+                  "gradient": [
+                    "#7474FF ",
+                    "#4D4DFF"
+                  ],
+                  "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjZweCIgaGVpZ2h0PSIyNnB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5GYXN0YmFyL1Byb2Nlc3MgU2VsZWN0ZWQ8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjExNS44MjA5NTUlIiB5MT0iLTE1LjkwMjU0OTMlIiB4Mj0iLTIwLjc4NTM2MTglIiB5Mj0iMTIwLjc1OTY2MyUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzc0NzRGRiIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNEQ0REZGIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgaWQ9IkZhc3RiYXIvUHJvY2Vzcy1TZWxlY3RlZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTUuNSw3IEwyMS41LDcgQzIxLjc3NjE0MjQsNyAyMiw2Ljc3NjE0MjM3IDIyLDYuNSBMMjIsNC41IEMyMiw0LjIyMzg1NzYzIDIxLjc3NjE0MjQsNCAyMS41LDQgTDUuNSw0IEw5LDQgTDksNyBMNS41LDcgWiBNNS41LDE0IEwyMS41LDE0IEMyMS43NzYxNDI0LDE0IDIyLDEzLjc3NjE0MjQgMjIsMTMuNSBMMjIsMTEuNSBDMjIsMTEuMjIzODU3NiAyMS43NzYxNDI0LDExIDIxLjUsMTEgTDUuNSwxMSBMMTksMTEgTDE5LDE0IEw1LjUsMTQgWiBNNS41LDE4IEwxNCwxOCBMMTQsMjEgTDUuNSwyMSBMMjEuNSwyMSBDMjEuNzc2MTQyNCwyMSAyMiwyMC43NzYxNDI0IDIyLDIwLjUgTDIyLDE4LjUgQzIyLDE4LjIyMzg1NzYgMjEuNzc2MTQyNCwxOCAyMS41LDE4IEw1LjUsMTggWiBNNS41LDMgTDIxLjUsMyBDMjIuMzI4NDI3MSwzIDIzLDMuNjcxNTcyODggMjMsNC41IEwyMyw2LjUgQzIzLDcuMzI4NDI3MTIgMjIuMzI4NDI3MSw4IDIxLjUsOCBMNS41LDggQzQuNjcxNTcyODgsOCA0LDcuMzI4NDI3MTIgNCw2LjUgTDQsNC41IEM0LDMuNjcxNTcyODggNC42NzE1NzI4OCwzIDUuNSwzIFogTTUuNSwxMCBMMjEuNSwxMCBDMjIuMzI4NDI3MSwxMCAyMywxMC42NzE1NzI5IDIzLDExLjUgTDIzLDEzLjUgQzIzLDE0LjMyODQyNzEgMjIuMzI4NDI3MSwxNSAyMS41LDE1IEw1LjUsMTUgQzQuNjcxNTcyODgsMTUgNCwxNC4zMjg0MjcxIDQsMTMuNSBMNCwxMS41IEM0LDEwLjY3MTU3MjkgNC42NzE1NzI4OCwxMCA1LjUsMTAgWiBNNS41LDE3IEwyMS41LDE3IEMyMi4zMjg0MjcxLDE3IDIzLDE3LjY3MTU3MjkgMjMsMTguNSBMMjMsMjAuNSBDMjMsMjEuMzI4NDI3MSAyMi4zMjg0MjcxLDIyIDIxLjUsMjIgTDUuNSwyMiBDNC42NzE1NzI4OCwyMiA0LDIxLjMyODQyNzEgNCwyMC41IEw0LDE4LjUgQzQsMTcuNjcxNTcyOSA0LjY3MTU3Mjg4LDE3IDUuNSwxNyBaIiBpZD0icHJvY2VzcyIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSI+PC9wYXRoPgogICAgPC9nPgo8L3N2Zz4="
+                }
+              }
+            ]
+          }
+        }
+      },
+      "folderName": "com.avid.central.ProcessDashboard",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "theming-engine",
+      "version": "0.0.1",
+      "description": "NUX theming engine",
+      "main": "dist/avid-nux-theming-engine.js",
+      "keywords": [
+        "avid",
+        "nux"
+      ],
+      "author": "volodymyr.shugaiev@avid.com",
+      "license": "UNLICENSED",
+      "private": true,
+      "avid": {
+        "main": "js/avid-nux-theming-engine.js",
+        "autoload": true,
+        "format": "amd",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "alias": "avid-nux-theming-engine-ea48643201d2499ca22b54f8c155188c"
+      },
+      "folderName": "avid-nux-theming-engine",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-cloudux-general-settings.js",
+        "dependencies": [
+          "com.avid.central.UICore",
+          "avid-moment"
+        ],
+        "autoload": false,
+        "format": "amd",
+        "alias": "general-system-settings-6cb1cf5ac24c4e419f50b318aae339f2"
+      },
+      "folderName": "avid-cloudux-general-settings",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "main": "js/DesktopNotifications.js",
+        "format": "global",
+        "alias": "DesktopNotifications-df8f2a18fd8744c6863fe7b0bb780cab"
+      },
+      "folderName": "com.avid.central.framework.DesktopNotifications",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "main": "index.js",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "embeddedIn": [
+          "adobe",
+          "mos"
+        ],
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16"
+        ],
+        "alias": "avid-ui-user-settings-43f5bf272966436ea6c1e3bcf83dcaf6",
+        "features": {
+          "provides": [
+            {
+              "apps": [
+                {
+                  "name": "avid-user-settings-app",
+                  "config": {
+                    "preload": false,
+                    "allowedContext": "none",
+                    "title": {
+                      "en": "User Settings"
+                    }
+                  },
+                  "menuIcon": {
+                    "visible": false
+                  }
+                }
+              ]
+            }
+          ],
+          "requires": [
+            {
+              "user-settings": "*"
+            }
+          ]
+        }
+      },
+      "folderName": "avid-ui-user-settings",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16",
+          "avid-nux-observable"
+        ],
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "alias": "avid-mcux-browse-00a4fff3cda04413b3e858b47f42f2b3",
+        "features": {
+          "provides": {
+            "apps": [
+              {
+                "name": "browse",
+                "config": {
+                  "id": "browse",
+                  "preload": false,
+                  "dockable": true,
+                  "inspector": false,
+                  "inspectorConfig": {
+                    "playerEditModeOn": false
+                  },
+                  "allowedContext": [
+                    {
+                      "mimeType": "text/x.avid.location-item-list"
+                    },
+                    {
+                      "mimeType": "text/x.avid.asset-list"
+                    },
+                    {
+                      "mimeType": "text/x.avid.asset-list+json"
+                    }
+                  ],
+                  "title": {
+                    "en": "Browse"
+                  }
+                },
+                "menuIcon": {
+                  "group": 100,
+                  "orderInGroup": 200,
+                  "gradient": [
+                    "var(--gradients-gradient01_start)",
+                    "var(--gradients-gradient01_end)"
+                  ],
+                  "icon": "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 26 26' style='enable-background:new 0 0 26 26;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23B1B5CA;%7D%0A%3C/style%3E%3Cpath class='st0' d='M2,6c0-1.1,0.9-2,2-2h5.9c0.7,0,1.3,0.3,1.7,0.9l2.8,4.2c0.4,0.6,1,0.9,1.7,0.9H23c0.5,0,1,0.4,1,1v9 c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V6z M13.5,6H22c1.1,0,2,0.9,2,2v1h-8c-0.3,0-0.7-0.2-0.8-0.4L13.5,6z'/%3E%3C/svg%3E%0A"
+                }
+              }
+            ],
+            "appViews": [
+              {
+                "name": "avid-mcux-browse"
+              }
+            ],
+            "actions": [
+              {
+                "name": "nux.create.folder.action"
+              },
+              {
+                "name": "nux.create.bin.action"
+              }
+            ]
+          }
+        }
+      },
+      "main": "index.js",
+      "folderName": "avid-mcux-browse",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-asset-editor",
+      "version": "19.12.5",
+      "description": "Asset Editor. Expect this to move around a bit.",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "features": {
+          "provides": {
+            "asset-editor-api": {
+              "name": "-"
+            },
+            "apps": [
+              {
+                "name": "edit",
+                "config": {
+                  "id": "edit",
+                  "dockable": false,
+                  "inspector": false,
+                  "inspectorConfig": {},
+                  "allowedContext": {
+                    "mimeType": "text/x.avid.asset-list",
+                    "excludeTypes": [
+                      "folder",
+                      "queue",
+                      "story"
+                    ]
+                  }
+                },
+                "menuIcon": {
+                  "visible": false
+                },
+                "header": {
+                  "hideIcon": true,
+                  "hideClose": true
+                }
+              }
+            ]
+          },
+          "requires": [
+            {
+              "common-edit": "1"
+            },
+            {
+              "graphics-timeline-model": "1"
+            },
+            {
+              "tabs": "*"
+            }
+          ]
+        },
+        "dependencies": [
+          "avid-ui-common-edit"
+        ],
+        "alias": "avid-ui-asset-editor-11be28f4b76c4d629c5795ca96652714",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-asset-editor",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-common-edit",
+      "version": "19.12.5",
+      "description": "Functionality that is shared across the edit view components",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "features": {
+          "provides": {
+            "common-edit": {
+              "name": "-"
+            },
+            "dataprovider-registry": {
+              "name": "-"
+            },
+            "playerdataprovider": {
+              "name": "-"
+            }
+          },
+          "requires": [
+            {
+              "store": "1"
+            },
+            {
+              "actions/timebased-metadata": "1",
+              "reducers/timebased-metadata": "1"
+            }
+          ]
+        },
+        "alias": "avid-ui-common-edit-142953194996411a91d1a6a8d5d7d49e",
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "dependencies": [
+          "avid-drag-data",
+          "avid-react-16",
+          "avid-react-dom-16",
+          "avid-nux-observable"
+        ]
+      },
+      "folderName": "avid-ui-common-edit",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16"
+        ],
+        "alias": "search-68b89fb74ee5473f9a1bfc0d09cc5998",
+        "secret": "45c1d7adf7bf96cde611b3106215b71f63b1444d6ff7f2de978bc809b602d49a",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "features": {
+          "provides": {
+            "appViews": [
+              {
+                "name": "search.search-result-details-pane"
+              }
+            ],
+            "search-result-detail-connector": [
+              {
+                "name": "search-result-detail-connector"
+              }
+            ]
+          }
+        }
+      },
+      "main": "index.js",
+      "folderName": "avid-nux-search-app",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "main": "js/rundown.js",
+      "name": "avid-ui-rundown",
+      "version": "1.0.71",
+      "avid": {
+        "alias": "avid.ui.rundown-488005131c8442b9911cab30bd12013d",
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "com.avid.central.Commons"
+        ],
+        "mode": [
+          "main"
+        ],
+        "features": {
+          "provides": [
+            {
+              "apps": [
+                {
+                  "name": "rundown",
+                  "config": {
+                    "id": "rundown",
+                    "dockable": true,
+                    "title": {
+                      "en": "Rundown",
+                      "uk": "Рандаун"
+                    },
+                    "allowedContext": {
+                      "mimeType": "text/x.avid.asset-list",
+                      "systemType": "inews",
+                      "types": [
+                        "queue",
+                        "story"
+                      ]
+                    }
+                  },
+                  "menuIcon": {
+                    "group": 100,
+                    "orderInGroup": 600,
+                    "gradient": [
+                      "#F9A74C",
+                      "#F9BB4C"
+                    ],
+                    "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjYgMjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI2IDI2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0IxQjVDQTt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYuNywxNS4yYzAuMi0wLjEsMC41LTAuMiwwLjgtMC4ySDE4VjUuNWMwLTAuNiwwLjItMS4xLDAuNS0xLjVoLTE0QzMuNyw0LDMsNC43LDMsNS41djE1QzMsMjEuMywzLjcsMjIsNC41LDIyaDE0LjZsLTIuOS00LjdDMTUuOCwxNi42LDE2LDE1LjcsMTYuNywxNS4yeiBNMTQuNSwxNWgtOEM2LjIsMTUsNiwxNC44LDYsMTQuNVM2LjIsMTQsNi41LDE0aDhjMC4zLDAsMC41LDAuMiwwLjUsMC41UzE0LjgsMTUsMTQuNSwxNXogTTE0LjUsMTJoLThDNi4yLDEyLDYsMTEuOCw2LDExLjVTNi4yLDExLDYuNSwxMWg4YzAuMywwLDAuNSwwLjIsMC41LDAuNVMxNC44LDEyLDE0LjUsMTJ6IE0xNC41LDloLThDNi4yLDksNiw4LjgsNiw4LjVDNiw4LjIsNi4yLDgsNi41LDhoOEMxNC44LDgsMTUsOC4yLDE1LDguNUMxNSw4LjgsMTQuOCw5LDE0LjUsOXoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjMuNSwxNkgyMlY1LjVDMjIsNC43LDIxLjMsNCwyMC41LDRTMTksNC43LDE5LDUuNVYxNmgtMS41Yy0wLjEsMC0wLjIsMC0wLjMsMC4xYy0wLjIsMC4xLTAuMywwLjUtMC4yLDAuN2wyLjksNC45YzAsMC4xLDAuMSwwLjEsMC4yLDAuMmMwLjIsMC4xLDAuNSwwLjEsMC43LTAuMmwzLTQuOWMwLTAuMSwwLjEtMC4yLDAuMS0wLjNDMjQsMTYuMiwyMy44LDE2LDIzLjUsMTZ6Ii8+PC9nPjwvc3ZnPg=="
+                  }
+                }
+              ],
+              "appViews": [
+                {
+                  "name": "inews-storyline-and-queue"
+                }
+              ],
+              "graphics-editor": [
+                {
+                  "name": "-"
+                }
+              ],
+              "edit-graphics-from-rundown": [
+                {
+                  "name": "-"
+                }
+              ]
+            }
+          ],
+          "processes": [
+            {
+              "asset-editor-api": "1"
+            }
+          ],
+          "requires": [
+            {
+              "common-edit": "1"
+            },
+            {
+              "dataprovider-registry": "1"
+            },
+            {
+              "graphics-timeline-model": "1"
+            }
+          ]
+        }
+      },
+      "folderName": "avid-ui-rundown",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-nux-user-settings.js",
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-cloudux-general-settings",
+          "avid-user-settings",
+          "avid-react-16",
+          "avid-react-dom-16"
+        ],
+        "alias": "avid-nux-user-settings-8b25e2232d3b4e359624d23168e1fd03",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "embeddedIn": [
+          "adobe",
+          "mos"
+        ],
+        "features": {
+          "provides": {
+            "user-settings": [
+              {
+                "name": "general"
+              },
+              {
+                "name": "save"
+              },
+              {
+                "name": "audio"
+              }
+            ]
+          }
+        }
+      },
+      "folderName": "avid-nux-user-settings",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "alias": "avid-nux-pulse-publish-df7d0e681113418d9abd5e4024b0d785",
+        "secret": "e4212b0cabe7dbb558ac6047523027b532b644b4965af2825b7ad816f7093ea8",
+        "features": {
+          "provides": {
+            "appViews": [
+              {
+                "name": "avid-nux-publish-view"
+              }
+            ],
+            "apps": [
+              {
+                "name": "publish",
+                "config": {
+                  "id": "publish",
+                  "dockable": true,
+                  "inspector": false,
+                  "hideInspector": false,
+                  "inspectorConfig": {
+                    "playerEditModeOn": true
+                  },
+                  "title": {
+                    "en": "Publish"
+                  },
+                  "allowedContext": "none",
+                  "preload": false
+                },
+                "menuIcon": {
+                  "group": 200,
+                  "orderInGroup": 201,
+                  "gradient": [
+                    "#A038F1",
+                    "#7917C6"
+                  ],
+                  "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNnB4IiBoZWlnaHQ9IjI2cHgiIHZpZXdCb3g9IjAgMCAyNiAyNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5GYXN0YmFyL1B1Ymxpc2ggU2VsZWN0ZWQ8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+ICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjEwMy42MzUyNzQlIiB5MT0iLTkuMDg4Njg5NjMlIiB4Mj0iLTMuNTI0ODA1NDklIiB5Mj0iMTA5LjAyNzY1NCUiIGlkPSJsaW5lYXJHcmFkaWVudC0xIj4gICAgICAgICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjQTAzOEYxIiBvZmZzZXQ9IjAlIj48L3N0b3A+ICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzc5MTdDNiIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+ICAgICAgICA8L2xpbmVhckdyYWRpZW50PiAgICA8L2RlZnM+ICAgIDxnIGlkPSJGYXN0YmFyL1B1Ymxpc2gtU2VsZWN0ZWQiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPHBhdGggZD0iTTE2LjE0MDI2OTksMTkuOTQ2MTkxMSBMOC44NjY1NTQzNSwxNS43ODk3ODIyIEM5LjMzMjE5NjE1LDE1LjMxMTQwNzMgOS42NzkxMTUxLDE0LjcxNjg4OTIgOS44NTk3MzAxLDE0LjA1MzgwODkgTDE3LjEzMzQ0NTYsMTguMjEwMjE3OCBDMTYuNjY3ODAzOSwxOC42ODg1OTI3IDE2LjMyMDg4NDksMTkuMjgzMTEwOCAxNi4xNDAyNjk5LDE5Ljk0NjE5MTEgWiBNOC44NjY1NTQzNSwxMC4yMTAyMTc4IEwxNi4xNDAyNjk5LDYuMDUzODA4OTUgQzE2LjMyMDg4NDksNi43MTY4ODkyMiAxNi42Njc4MDM5LDcuMzExNDA3MzMgMTcuMTMzNDQ1Niw3Ljc4OTc4MjE3IEw5Ljg1OTczMDEsMTEuOTQ2MTkxMSBDOS42NzkxMTUxLDExLjI4MzExMDggOS4zMzIxOTYxNSwxMC42ODg1OTI3IDguODY2NTU0MzUsMTAuMjEwMjE3OCBaIE02LDE2IEM0LjM0MzE0NTc1LDE2IDMsMTQuNjU2ODU0MiAzLDEzIEMzLDExLjM0MzE0NTggNC4zNDMxNDU3NSwxMCA2LDEwIEM3LjY1Njg1NDI1LDEwIDksMTEuMzQzMTQ1OCA5LDEzIEM5LDE0LjY1Njg1NDIgNy42NTY4NTQyNSwxNiA2LDE2IFogTTIwLDggQzE4LjM0MzE0NTgsOCAxNyw2LjY1Njg1NDI1IDE3LDUgQzE3LDMuMzQzMTQ1NzUgMTguMzQzMTQ1OCwyIDIwLDIgQzIxLjY1Njg1NDIsMiAyMywzLjM0MzE0NTc1IDIzLDUgQzIzLDYuNjU2ODU0MjUgMjEuNjU2ODU0Miw4IDIwLDggWiBNMjAsMjQgQzE4LjM0MzE0NTgsMjQgMTcsMjIuNjU2ODU0MiAxNywyMSBDMTcsMTkuMzQzMTQ1OCAxOC4zNDMxNDU4LDE4IDIwLDE4IEMyMS42NTY4NTQyLDE4IDIzLDE5LjM0MzE0NTggMjMsMjEgQzIzLDIyLjY1Njg1NDIgMjEuNjU2ODU0MiwyNCAyMCwyNCBaIiBpZD0icHVibGlzaCIgZmlsbD0idXJsKCNsaW5lYXJHcmFkaWVudC0xKSI+PC9wYXRoPiAgICA8L2c+PC9zdmc+"
+                }
+              }
+            ]
+          },
+          "requires": {
+            "asset-editor-api": "1"
+          }
+        },
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16"
+        ]
+      },
+      "main": "index.js",
+      "folderName": "avid-nux-pulse-publish",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "mode": [
+          "admin",
+          "main"
+        ],
+        "alias": "avid-uir-user-settings-21a6670894a14c53bd936e673d37bf33",
+        "secret": "63c28c5a1f8f8ca2861125489763724484f1b913571f9a9f14457bf6be84c6a5",
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16",
+          "avid-broadcast-notification"
+        ],
+        "features": {
+          "provides": {
+            "user-settings": [
+              {
+                "name": "user-settings-test-tab"
+              }
+            ]
+          }
+        }
+      },
+      "main": "index.js",
+      "folderName": "avid-uir-user-settings",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-sequence",
+      "version": "19.12.5",
+      "description": "Sequence Pain!",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "features": {
+          "provides": {
+            "graphics-editor": {
+              "name": "-"
+            },
+            "appViews": {
+              "name": "-"
+            },
+            "test-functions": {
+              "name": "-"
+            }
+          },
+          "requires": [
+            {
+              "graphics-timeline-model": "1"
+            },
+            {
+              "common-edit": "1"
+            },
+            {
+              "actions/timebased-metadata": "1"
+            },
+            {
+              "reducers/timebased-metadata": "1"
+            },
+            {
+              "store": "1"
+            },
+            {
+              "actions/playerview": "1"
+            },
+            {
+              "reducers/playerview": "1"
+            },
+            {
+              "test-plugin": "*"
+            }
+          ]
+        },
+        "dependencies": [
+          "com.avid.central.Commons",
+          "avid-ui-player"
+        ],
+        "alias": "avid-ui-sequence-8a3f66462990418793419518f7a7aee2",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-sequence",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-player",
+      "version": "19.12.5",
+      "description": "Player view",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "features": {
+          "provides": {
+            "appViews": {
+              "name": "-"
+            },
+            "actions/playerview": {
+              "name": "-"
+            },
+            "reducers/playerview": {
+              "name": "-"
+            },
+            "test-functions": {
+              "name": "-"
+            }
+          },
+          "requires": [
+            {
+              "store": "1"
+            },
+            {
+              "quicksendprovider": "*"
+            },
+            {
+              "actions/timebased-metadata": "1"
+            },
+            {
+              "reducers/timebased-metadata": "1"
+            },
+            {
+              "dataprovider-registry": "1"
+            },
+            {
+              "test-plugin": "*"
+            }
+          ]
+        },
+        "dependencies": [
+          "com.avid.central.Commons",
+          "avid-ui-common-edit",
+          "avid-broadcast-notification"
+        ],
+        "alias": "avid-ui-player-86221e00d20341e992e19acebc05a26e",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-player",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-audio",
+      "version": "19.12.5",
+      "description": "Audio view",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "features": {
+          "provides": {
+            "tabs": {
+              "name": "-"
+            },
+            "test-functions": {
+              "name": "-"
+            }
+          },
+          "requires": [
+            {
+              "common-edit": "1"
+            },
+            {
+              "test-plugin": "*"
+            }
+          ]
+        },
+        "alias": "avid-ui-audio-0595e8eee2d14550a0e2947feeccc429",
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-audio",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "name": "avid-ui-graphics-connector",
+      "version": "19.12.5",
+      "description": "Model provider for graphics connector",
+      "author": "Avid",
+      "license": "Avid",
+      "main": "./bundle.js",
+      "publishConfig": {
+        "registry": "http://muc-nexus:8081/nexus/content/repositories/npm-muc/"
+      },
+      "avid": {
+        "format": "amd",
+        "autoload": false,
+        "dependencies": [
+          "com.avid.central.Commons"
+        ],
+        "alias": "avid-ui-graphics-connector-ad698de018dd44138ae1ec81302e041e",
+        "features": {
+          "provides": {
+            "graphics-timeline-model": {
+              "name": "-"
+            }
+          },
+          "requires": [
+            {
+              "graphics-editor": "*"
+            },
+            {
+              "graphics-vendor": "*"
+            },
+            {
+              "playerdataprovider": "1"
+            }
+          ]
+        },
+        "mode": [
+          "main",
+          "embedded"
+        ]
+      },
+      "folderName": "avid-ui-graphics-connector",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "main": "js/avid-connection-handlers.js",
+        "autoload": true,
+        "format": "amd",
+        "dependencies": [
+          "avid-nux-global-libs",
+          "com.avid.central.UICore",
+          "avid-nux-observable"
+        ],
+        "mode": [
+          "admin",
+          "main",
+          "embedded"
+        ],
+        "alias": "avid-connection-handlers-82380a95cd454520b864be9673e3a3dc"
+      },
+      "folderName": "avid-connection-handlers",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16",
+          "avid-user-settings"
+        ],
+        "alias": "avid-ui-search-3217c4fa5ad3446faf8705cca48b1708",
+        "mode": [
+          "main",
+          "embedded"
+        ],
+        "features": {
+          "provides": {
+            "appViews": [
+              {
+                "name": "search.search-pane"
+              }
+            ],
+            "apps": [
+              {
+                "name": "search",
+                "config": {
+                  "preload": false,
+                  "dockable": true,
+                  "inspector": false,
+                  "allowedContext": "none",
+                  "title": {
+                    "en": "Search"
+                  }
+                },
+                "menuIcon": {
+                  "group": 100,
+                  "orderInGroup": 290,
+                  "gradient": [
+                    "var(--gradients-gradient02_start)",
+                    "var(--gradients-gradient02_end)"
+                  ],
+                  "icon": "data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 26 26' style='enable-background:new 0 0 26 26;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23B1B5CA;%7D%0A%3C/style%3E%3Cpath class='st0' d='M21.6,23c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4l-4.3-4.3c2.8-3.5,2.6-8.7-0.7-12c-3.5-3.5-9.2-3.5-12.7,0 s-3.5,9.2,0,12.7c3.3,3.3,8.4,3.5,12,0.7L21.6,23z M7.5,15.9c-2.3-2.3-2.3-6.1,0-8.5s6.1-2.3,8.5,0s2.3,6.1,0,8.5 C13.6,18.3,9.8,18.3,7.5,15.9z'/%3E%3C/svg%3E "
+                }
+              }
+            ]
+          },
+          "requires": [
+            {
+              "search-result-detail-connector": "?"
+            }
+          ]
+        }
+      },
+      "main": "index.js",
+      "folderName": "avid-ui-search",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "identity": {
+        "appName": "avid-ui-quicksend-stp-modal"
+      },
+      "main": "index.js",
+      "avid": {
+        "autoload": false,
+        "format": "amd",
+        "mode": [
+          "main"
+        ],
+        "alias": "avid-ui-quicksend-stp-modal-72e92fcb45be487fb38d5aae6e935115",
+        "secret": "e501a9641cc8a91ef9e3c74d38e93268064ef6343e9f89eef0e07094d2bc063d44c84becb92edc56ec41cbf6d0655f71facd8abfbcd5a163c4dc11d249ff6c8f",
+        "dependencies": [
+          "avid-react-16",
+          "avid-react-dom-16"
+        ],
+        "features": {
+          "provides": {
+            "quicksendprovider": [
+              {
+                "name": "avid-ui-quicksend-stp-modal"
+              }
+            ]
+          }
+        }
+      },
+      "folderName": "avid-ui-quicksend-stp-modal",
+      "basePath": "/plugins/core-app/plugins"
+    },
+    {
+      "identity": {
+        "appName": "app-sample"
+      },
+      "main": "index.js",
+      "avid": {
+        "format": "amd",
+        "alias": "",
+        "secret": "",
+        "autoload": false,
+        "dependencies": [
+          "avid-drag-data",
+          "avid-nux-observable"
+        ],
+        "features": {
+          "requires": {
+            "asset-editor-api": "1"
+          },
+          "provides": {
+            "apps": [
+              {
+                "name": "app-sample",
+                "config": {
+                  "id": "app-sample",
+                  "title": {
+                    "en": "app-sample"
+                  },
+                  "dockable": false,
+                  "inspector": false
+                },
+                "menuIcon": {
+                  "group": 200,
+                  "orderInGroup": 200,
+                  "gradient": [
+                    "#ba2f82",
+                    "#cf4c85"
+                  ],
+                  "icon": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJzZWFyY2gtbG9jYXRpb24iCiAgICAgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXNlYXJjaC1sb2NhdGlvbiBmYS13LTE2IiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICA8cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiCiAgICAgICAgICBkPSJNNTA1LjA0IDQ0Mi42NmwtOTkuNzEtOTkuNjljLTQuNS00LjUtMTAuNi03LTE3LTdoLTE2LjNjMjcuNi0zNS4zIDQ0LTc5LjY5IDQ0LTEyNy45OUM0MTYuMDMgOTMuMDkgMzIyLjkyIDAgMjA4LjAyIDBTMCA5My4wOSAwIDIwNy45OHM5My4xMSAyMDcuOTggMjA4LjAyIDIwNy45OGM0OC4zIDAgOTIuNzEtMTYuNCAxMjguMDEtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcxIDk5LjY5YzkuNCA5LjQgMjQuNiA5LjQgMzMuOSAwbDI4LjMtMjguM2M5LjQtOS40IDkuNC0yNC41OS4xLTMzLjk5em0tMjk3LjAyLTkwLjdjLTc5LjU0IDAtMTQ0LTY0LjM0LTE0NC0xNDMuOTggMC03OS41MyA2NC4zNS0xNDMuOTggMTQ0LTE0My45OCA3OS41NCAwIDE0NCA2NC4zNCAxNDQgMTQzLjk4IDAgNzkuNTMtNjQuMzUgMTQzLjk4LTE0NCAxNDMuOTh6bS4wMi0yMzkuOTZjLTQwLjc4IDAtNzMuODQgMzMuMDUtNzMuODQgNzMuODMgMCAzMi45NiA0OC4yNiA5My4wNSA2Ni43NSAxMTQuODZhOS4yNCA5LjI0IDAgMCAwIDE0LjE4IDBjMTguNDktMjEuODEgNjYuNzUtODEuODkgNjYuNzUtMTE0Ljg2IDAtNDAuNzgtMzMuMDYtNzMuODMtNzMuODQtNzMuODN6bTAgOTZjLTEzLjI2IDAtMjQtMTAuNzUtMjQtMjQgMC0xMy4yNiAxMC43NS0yNCAyNC0yNHMyNCAxMC43NCAyNCAyNGMwIDEzLjI1LTEwLjc1IDI0LTI0IDI0eiI+PC9wYXRoPgo8L3N2Zz4="
+                }
+              }
+            ]
+          }
+        }
+      },
+      "folderName": "app-sample",
+      "basePath": "/plugins/"
+    }
+  ]
+}
