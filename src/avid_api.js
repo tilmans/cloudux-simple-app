@@ -19,10 +19,27 @@ export function api() {
         return avidDragData.getDataTransfer();
     }
 
+    function isTimelineVisible() {
+        const timeline = document.querySelector(".av-app-view.av-view.av-timeline")
+        if (timeline) {
+            const state = timeline.parentElement.style.display
+            return state !== "none"
+        } else {
+            return false
+        }
+    }
+
+    function toggleTimeline() {
+        const timelineButton = document.querySelector(".vis-button.timeline")
+        if (timelineButton) {
+            timelineButton.click()
+        }
+    }
+
     return {
         setDispatcher: newDispatcher => dispatcher = newDispatcher,
         setContext: (context) => setContext(context),
-        getDragData: getDragData,
+        getDragData,
         setAssetEditor: (newAssetEditor) => {
             assetEditor = newAssetEditor;
             player = avid_player_api(assetEditor, "Source")
@@ -30,5 +47,7 @@ export function api() {
         setCommonEdit: (newCommonEdit) => commonEdit = newCommonEdit,
         setDataProviders: (newDataProviders) => dataProviders = newDataProviders,
         getPlayer: () => player,
+        isTimelineVisible,
+        toggleTimeline,
     }
 }
