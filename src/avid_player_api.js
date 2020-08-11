@@ -37,11 +37,21 @@ export default function createWrapper(assetEditor, mode) {
         assetEditor.setMarks(markin, markout, mode)
     }
 
+    function getInPoint() {
+        return assetEditor.getMarkIn(mode)
+    }
+
+    function getOutPoint() {
+        return assetEditor.getMarkOut(mode)
+    }
+
     return {
         getPlayerContext:getPlayerContext,
         getCurrentFrame:getCurrentFrame,
         play:play,
         setMarks:setMarks,
+        getInPoint:getInPoint,
+        getOutPoint:getOutPoint,
         onFrameChange:onFrameChange,
         cleanup:cleanup,
 

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 
 export function PlayerControl({avid}) {
     const [frame, setFrame] = useState(0)
+    const [inPoint, setInPoint] = useState(0)
+    const [outPoint, setOutPoint] = useState(0)
 
     const frameCallback = frame => {
         setFrame(frame)
@@ -30,11 +32,18 @@ export function PlayerControl({avid}) {
         avid.getPlayer().setMarks(10, 500)
     }
 
+    function getInOut(e) {
+        setInPoint(avid.getPlayer().getInPoint())
+        setOutPoint(avid.getPlayer().getOutPoint())
+    }
+
     return (
         <div style={rowItem}>
-            <a href="#" onClick={play}>Play</a>
-            <a href="#" onClick={setInOut}>SetMarks</a>
-            <div>{frame}</div>
+            <button onClick={play}>Play</button>
+            <button onClick={setInOut}>SetMarks</button>
+            <div>Current Frame: {frame}</div>
+            <button onClick={getInOut}>Get In/Out</button>
+            <div>In: {inPoint}, Out: {outPoint}</div>
         </div>
     )
 }
