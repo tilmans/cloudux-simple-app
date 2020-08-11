@@ -4,11 +4,41 @@ export default function createWrapper(assetEditor, mode) {
 
     const internalPlayer = assetEditor["DEPRECATED_DO_NOT_USE"].getPlayerApiSingleton()
     const listeners = []
+    const monitors = []
+    let playerController = null
 
     function onFrameChange(callback) {
         listen("AVPlayerPosition", data => {
             callback(data.frames)
         })
+    }
+
+    function onMonitorModeChange(callback) {
+        monitors.push(internalPlayer.onMonitorChange(data => {
+            callback({
+                ...data,
+                monitor: normalizeMonitorName(data.monitor),
+            })
+        }))
+    }
+
+    function normalizeMonitorName(name) {
+        return name === "Asset" ? "Source" : name
+    }
+
+    function denormalizeMonitorName(name) {
+        return name === "Source" ? "Asset" : name
+    }
+
+    function getCurrentMonitor() {
+        return normalizeMonitorName(internalPlayer.getShownMonitor())
+    }
+
+    function setCurrentMonitor(name) {
+        if (playerController == null) {
+            playerController = internalPlayer.getPlayerController()
+        }
+        playerController.setMonitor(denormalizeMonitorName(name))
     }
 
     function listen(event, callback) {
@@ -19,6 +49,7 @@ export default function createWrapper(assetEditor, mode) {
     function cleanup() {
         console.info("Unregister all listeners")
         listeners.forEach(([event, callback]) => internalPlayer.unlisten(event,callback))
+        monitors.forEach(monitor => monitor())
     }
 
     function getPlayerContext() {
@@ -46,14 +77,17 @@ export default function createWrapper(assetEditor, mode) {
     }
 
     return {
-        getPlayerContext:getPlayerContext,
-        getCurrentFrame:getCurrentFrame,
-        play:play,
-        setMarks:setMarks,
-        getInPoint:getInPoint,
-        getOutPoint:getOutPoint,
-        onFrameChange:onFrameChange,
-        cleanup:cleanup,
-
+        getPlayerContext,
+        getCurrentFrame,
+        play,
+        setMarks,
+        getInPoint,
+        getOutPoint,
+        onFrameChange,
+        cleanup,
+        internalPlayer,
+        onMonitorModeChange,
+        getCurrentMonitor,
+        setCurrentMonitor,
     }
 }
