@@ -26,7 +26,6 @@ export const avid = [
     {
         name: appConfig.identity.appName,
         provides: ["apps"],
-        // requires: ["asset-editor-api"],
         create: (deps, meta) => {
             console.log("Deps",deps,meta)
             return {
