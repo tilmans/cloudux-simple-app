@@ -2,10 +2,26 @@ export default function createWrapper(assetEditor, mode) {
     if (mode !== "Source" && mode !== "Output")
         throw "Unexpected mode, should be Source or Output"
 
+    window.playerObject = internalPlayer
+
     const internalPlayer = assetEditor["DEPRECATED_DO_NOT_USE"].getPlayerApiSingleton()
     const listeners = []
     const monitors = []
     let playerController = null
+
+    function play() {
+        if (playerController == null) {
+            playerController = internalPlayer.getPlayerController()
+        }
+        playerController.setPlaySpeed(1)
+    }
+
+    function stop() {
+        if (playerController == null) {
+            playerController = internalPlayer.getPlayerController()
+        }
+        playerController.setPlaySpeed(0)
+    }
 
     function onFrameChange(callback) {
         listen("AVPlayerPosition", data => {
@@ -89,5 +105,7 @@ export default function createWrapper(assetEditor, mode) {
         onMonitorModeChange,
         getCurrentMonitor,
         setCurrentMonitor,
+        play,
+        stop
     }
 }

@@ -59,8 +59,18 @@ export function PlayerControl({avid}) {
         avid.getPlayer().setCurrentFrame(20)
     }
 
+    function play(e) {
+        avid.getPlayer().play()
+    }
+
+    function stop(e) {
+        avid.getPlayer().stop()
+    }
+
     return (
         <div style={rowItem}>
+            <button onClick={play}>Play</button>
+            <button onClick={stop}>Stop</button>
             <button onClick={setCurrentFrame}>Set Frame</button>
             <div>Current Frame: {frame}</div>
             <button onClick={setInOut}>SetMarks</button>

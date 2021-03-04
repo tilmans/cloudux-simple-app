@@ -20,14 +20,12 @@ export const avid = [
             factory: () => {
                 return new View(avid_api);
             },
-            // _proto: new View(api),
         }),
     },
     {
         name: appConfig.identity.appName,
         provides: ["apps"],
         create: (deps, meta) => {
-            console.log("Deps",deps,meta)
             return {
                 factory: (config) => {
                     return new App(avid_api, config)

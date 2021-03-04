@@ -23,8 +23,10 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
     plugins: [
-        // new CopyPlugin([
-        //         'src/package.json'
-        //     ]),
-    ],
+        new CopyPlugin({
+            patterns: [
+                'src/package.json'
+            ]
+        })
+    ]
 }
